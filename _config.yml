@@ -97,7 +97,7 @@ theme: ayer
 deploy:
   type: git
   repo: 
-    vps: root@104.248.143.91:/home/git/My_blog.git
+    vps: git@142.93.162.177:/home/git/My_blog.git
     github: git@github.com:heros979/My_blog.git
   branch: master
   message: Hexo blog update - {{now('YYYY-MM-DD HH:mm:ss')}} 
