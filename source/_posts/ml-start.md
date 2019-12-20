@@ -29,7 +29,7 @@ x就是我们的input，y就是我们的label，我们首先给算法一定的(x
 * 人脸识别(微信、支付宝、宿舍门禁)
 * 量化交易(预测股市)
 * 房价预测
-* 推荐系统(淘宝、京东、抖音等) 
+* 推荐系统(淘宝、京东、抖音)
 * ~~老中医~~
 * 解微分方程、不定积分(见：[AI拿下高数一血，求解微分方程、不定积分只需1秒，成绩远超Matlab](https://zhuanlan.zhihu.com/p/98174049?utm_source=zhihu&utm_medium=social&utm_oi=667848254054731776))
 * 寻找淹没在背景噪声中的小信号([Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson)、引力波信号)
