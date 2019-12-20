@@ -15,9 +15,13 @@ Cloud over head. <br>
 Ashes tangled my hair, <br>
 Mind lost from ear. <br>
 <br>
+<<<<<<< HEAD
 </font> 
 <!--more-->
 <font face="Ink Free" size=5>
+=======
+<!--more-->
+>>>>>>> 43d544b631c1d36ec515ad36030c25246d1cc4dd
 Running from sunlight, <br>
 The music ignite a fire, <br>
 Lit a face in the dusky theater air; <br>
