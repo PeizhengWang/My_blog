@@ -3,6 +3,8 @@ title: 机器学习概览
 date: 2019-12-14 12:07:39
 tags: [机器学习]
 mathjax: true
+cover: /asset/AI.jpeg
+top: true
 ---
 ## 机器学习是什么
 
@@ -13,7 +15,6 @@ mathjax: true
 >Arthur samuel：机器学习是在不直接针对问题进行编程的情况下，赋予计算机学习能力的一个研究领域。
 
 一个计算机程序，针对某个特定任务，从历史数据学习，并且越做越好。
-<!--more-->
 
 让我[引用](https://www.jianshu.com/p/25ef14c072ad)一张图片来说明：
 ![机器学习过程](/asset/whatisml.png)
@@ -112,8 +113,6 @@ scikit-learn：最有名且易用好上手，广泛作为机器学习的入门�
 
 - 训练好的模型进行存储，以备下次使用
 
--------------------举个scikit例子--------------------
-
 ## 机器如何学习
 
 ### 损失函数
@@ -148,6 +147,38 @@ $$
 
 我们从一个随机的k和b出发，沿着向下最快的路径行走，直到达到最低点，即此时k和b收敛于一个定值，这个定值就是我们想要得到的使得损失函数最小的值。
 
+## 代码实现
+
+本文使用scikit-learn实现一个线性回归模型举例：
+```python
+from sklearn.linear_model import LinearRegression #从sklearn引入线性回归模型
+model=LinearRegression()                          #声明线性回归模型
+model.fit(X_train,Y_train)                        #用训练数据训练模型
+Y_pred=model.predict(X_test)                      #用模型对测试数据做预测
+print(Y_pred)                                     #输出预测结果
+```
+常用的API有：
+<table>
+  <tr>
+    <th>API</th>
+    <th>解释</th>
+  </tr>
+  <tr>
+    <td>fit(X_train,Y_train)</td>
+    <td>训练模型</td>
+  </tr>
+    <tr>
+    <td>predict(X_test)</td>
+    <td>预测测试数据的结果</td>
+  </tr>
+    <tr>
+    <td>score(X_test,Y_test)</td>
+    <td>测试预测数据的score(例如正确率)</td>
+  </tr>
+</table>
+
+这里只是展示了很少很少的API，还有很多非常非常实用的API及教程参见[官方文档](https://sklearn.apachecn.org/)
+
 ## 总结
 
 - 1.获取数据
@@ -155,6 +186,3 @@ $$
 - 3.训练模型(20%的时间)
 - 4.进行预测
 - 5.观察结果，不满意则重复2.3.4.步，满意则保存模型
-
-
-
