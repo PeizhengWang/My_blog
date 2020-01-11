@@ -1,27 +1,21 @@
 ---
-title: First poem
-date: 2019-12-15 17:11:35
+title: First Poem
+date: 2019-12-12 00:45:00
 tags: poem
+cover: /asset/lost1.jpg
 ---
 <font face="Times New Roman" size=6>LOST</font>  
 <br>
-<font face="Monotype Corsiva" size=5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----Evie</font>
+<font face="Monotype Corsiva" size=6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----Evie</font>
 <br>
-<font face="Ink Free" size=5>
 
+<font face="Ink Free" size=5>
 Chilled night, chilly light, <br>
 Wind rolling sky, <br>
 Cloud over head. <br>
 Ashes tangled my hair, <br>
 Mind lost from ear. <br>
 <br>
-<<<<<<< HEAD
-</font> 
-<!--more-->
-<font face="Ink Free" size=5>
-=======
-<!--more-->
->>>>>>> 43d544b631c1d36ec515ad36030c25246d1cc4dd
 Running from sunlight, <br>
 The music ignite a fire, <br>
 Lit a face in the dusky theater air; <br>
