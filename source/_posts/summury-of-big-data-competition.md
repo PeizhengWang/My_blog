@@ -1,6 +1,7 @@
 ---
 title: 2019大数据算法赛总结
 date: 2019-12-09 10:32:45
+categories: 机器学习
 tags: [bigdata,总结,机器学习]
 cover: /asset/Big-Data.jpg
 ---

@@ -1,6 +1,7 @@
 ---
 title: Third Poem
 date: 2019-12-17 22:16:00
+categories: 诗集
 tags: poem
 cover: /asset/hiding.jpg
 ---

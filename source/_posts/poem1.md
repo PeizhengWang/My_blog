@@ -1,6 +1,7 @@
 ---
 title: First Poem
 date: 2019-12-12 00:45:00
+categories: 诗集
 tags: poem
 cover: /asset/lost1.jpg
 ---

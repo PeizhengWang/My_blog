@@ -1,6 +1,7 @@
 ---
 title: Hexo+markdown开始博客写作
 date: 2019-12-11 22:17:30
+categories: 博客
 tags: [hexo,markdown,写作,网站]
 cover: /asset/write.jpeg
 ---
@@ -182,6 +183,6 @@ And the cycles wheel.
 
 更多语法，比如标题、换行、注释、分割线、引用、代码块、列表、链接、表格、图片、流程图、LaTeX。
 
-![write](/asset/write.gif)
+![write](http://n.sinaimg.cn/translate/20171114/WsmA-fynstfh7830699.gif)
 
 参见：[Markdown快速入门](https://sspai.com/post/45816)，[Markdown语法(字体,样式,公式,背景,图表等)](https://blog.csdn.net/woswod/article/details/82753451)

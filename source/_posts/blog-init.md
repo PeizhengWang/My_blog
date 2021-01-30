@@ -1,6 +1,7 @@
 ---
 title: DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客
 date: 2019-12-10 23:57:14
+categories: 博客
 tags: [VPS,hexo,hginx,网站]
 cover: /asset/create.jpg
 ---

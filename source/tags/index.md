@@ -1,6 +1,6 @@
 ---
-title: Tags
+title: 标签
 date: 2019-12-12 00:02:39
-layout: "tags"
+type: tags
 comments: false
 ---

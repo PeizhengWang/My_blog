@@ -1,6 +1,7 @@
 ---
 title: 机器学习概览
 date: 2019-12-14 12:07:39
+categories: 机器学习
 tags: [机器学习]
 mathjax: true
 cover: /asset/AI.jpeg
