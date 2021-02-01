@@ -8,6 +8,7 @@ cover: /asset/lost1.jpg
 <font face="Times New Roman" size=6>LOST</font>  
 <br>
 <font face="Monotype Corsiva" size=6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----Evie</font>
+<!--more-->
 <br>
 
 <font face="Ink Free" size=5>

@@ -4,6 +4,7 @@ date: 2019-12-11 22:17:30
 categories: 博客
 tags: [hexo,markdown,写作,网站]
 cover: /asset/write.jpeg
+toc: true
 ---
 ## 目录
 

@@ -4,6 +4,7 @@ date: 2019-12-10 23:57:14
 categories: 博客
 tags: [VPS,hexo,hginx,网站]
 cover: /asset/create.jpg
+toc: true
 ---
 强烈推荐[Github学生包](https://education.github.com/pack)，内含大量对学生的免费福利，包括不限于Jetbrain全家桶，AWS，Azure，DigitalOcean，Namecheap，name等。本文基于Github学生包里的DigitalOcean $50和Namecheap一年个人域名搭建个人博客。
 

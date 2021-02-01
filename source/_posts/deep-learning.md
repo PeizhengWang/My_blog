@@ -5,13 +5,15 @@ tags: [机器学习]
 categories: 机器学习
 mathjax: true
 cover: /asset/AI.jpeg
-top: true
+toc: true
 ---
 ## 回顾机器学习
 
 ### 定义
 一个计算机程序，针对某个特定任务，从历史数据学习，并且越做越好。
+<!--more-->
 ![机器学习过程](/asset/whatisml.png)
+
 ### 机器学习的核心
 - 数据
 - 模型

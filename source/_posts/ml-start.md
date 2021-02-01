@@ -4,8 +4,7 @@ date: 2019-12-14 12:07:39
 categories: 机器学习
 tags: [机器学习]
 mathjax: true
-cover: /asset/AI.jpeg
-top: true
+toc: true
 ---
 ## 机器学习是什么
 
@@ -16,7 +15,7 @@ top: true
 >Arthur samuel：机器学习是在不直接针对问题进行编程的情况下，赋予计算机学习能力的一个研究领域。
 
 一个计算机程序，针对某个特定任务，从历史数据学习，并且越做越好。
-
+<!--more-->
 让我[引用](https://www.jianshu.com/p/25ef14c072ad)一张图片来说明：
 ![机器学习过程](/asset/whatisml.png)
 注意：这里是用有监督模型举例(后面会对这个名词进一步解释)
