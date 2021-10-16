@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>深度学习 - Peizheng&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Peizheng&#039;s Blog"><meta name="msapplication-TileImage" content="/img/logo.jpg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Peizheng&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="回顾机器学习定义一个计算机程序，针对某个特定任务，从历史数据学习，并且越做越好。"><meta property="og:type" content="blog"><meta property="og:title" content="深度学习"><meta property="og:url" content="https://oxixo.fun/2020/03/20/deep-learning/"><meta property="og:site_name" content="Peizheng&#039;s Blog"><meta property="og:description" content="回顾机器学习定义一个计算机程序，针对某个特定任务，从历史数据学习，并且越做越好。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://oxixo.fun/asset/AI.jpeg"><meta property="article:published_time" content="2020-03-20T02:45:58.000Z"><meta property="article:modified_time" content="2021-02-01T15:48:24.000Z"><meta property="article:author" content="Wang Peizheng"><meta property="article:tag" content="机器学习"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/asset/AI.jpeg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://oxixo.fun/2020/03/20/deep-learning/"},"headline":"深度学习","image":[],"datePublished":"2020-03-20T02:45:58.000Z","dateModified":"2021-02-01T15:48:24.000Z","author":{"@type":"Person","name":"Wang Peizheng"},"publisher":{"@type":"Organization","name":"Peizheng's Blog","logo":{"@type":"ImageObject","url":"https://oxixo.fun/img/logo.jpg"}},"description":"回顾机器学习定义一个计算机程序，针对某个特定任务，从历史数据学习，并且越做越好。"}</script><link rel="canonical" href="https://oxixo.fun/2020/03/20/deep-learning/"><link rel="alternate" href="/atom.xml" title="Peizheng&#039;s Blog" type="application/atom+xml"><link rel="icon" href="/img/logo.jpg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.15.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.jpg" alt="Peizheng&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/heros979"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/asset/AI.jpeg" alt="深度学习"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-03-20T02:45:58.000Z" title="2020/3/20 上午10:45:58">2020-03-20</time>发表</span><span class="level-item"><time dateTime="2021-02-01T15:48:24.000Z" title="2021/2/1 下午11:48:24">2021-02-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></span><span class="level-item">8 分钟读完 (大约1223个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">深度学习</h1><div class="content"><h2 id="回顾机器学习"><a href="#回顾机器学习" class="headerlink" title="回顾机器学习"></a>回顾机器学习</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>一个计算机程序，针对某个特定任务，从历史数据学习，并且越做越好。</p>
+<a id="more"></a>
+<p><img src="/asset/whatisml.png" alt="机器学习过程"></p>
+<h3 id="机器学习的核心"><a href="#机器学习的核心" class="headerlink" title="机器学习的核心"></a>机器学习的核心</h3><ul>
+<li>数据</li>
+<li>模型<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3></li>
+<li>有监督学习<ul>
+<li>回归<ul>
+<li>线性回归</li>
+</ul>
+</li>
+<li>分类<ul>
+<li>SVM<br><img src="/asset/svm.jpg" alt="SVM"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>无监督学习<ul>
+<li>聚类</li>
+<li>主成分分析</li>
+</ul>
+</li>
+<li>半监督学习</li>
+<li>增强学习(Reinforcement Learning)<h3 id="学习过程-监督学习"><a href="#学习过程-监督学习" class="headerlink" title="学习过程(监督学习)"></a>学习过程(监督学习)</h3></li>
+<li>损失函数(loss function)</li>
+<li>优化方法</li>
+<li>梯度下降<br><img src="/asset/gradient.jpeg" alt="梯度下降"><h2 id="深度学习是什么"><a href="#深度学习是什么" class="headerlink" title="深度学习是什么"></a>深度学习是什么</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0">wiki</a>：深度学习（英语：Deep Learning）是机器学习的分支，是一种以人工神经网络为架构，对数据进行表征学习的算法。</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/asset/dltoml.jpg" alt="深度学习与机器学习的关系"><br><strong><center>深度学习是机器学习的子集</center></strong></p>
+<h2 id="深度学习和传统机器学习算法的异同"><a href="#深度学习和传统机器学习算法的异同" class="headerlink" title="深度学习和传统机器学习算法的异同"></a>深度学习和传统机器学习算法的异同</h2><h3 id="数据方面"><a href="#数据方面" class="headerlink" title="数据方面"></a>数据方面</h3><blockquote>
+<p>Andrew Ng：“与深度学习类似的是，火箭发动机是深度学习模型，燃料是我们可以提供给这些算法的海量数据。</p>
+</blockquote>
+<p><img src="/asset/dl_data.jpg" alt="深度学习与数据的关系"></p>
+<h3 id="计算量方面"><a href="#计算量方面" class="headerlink" title="计算量方面"></a>计算量方面</h3><p>深度学习在更新模型网络权重时涉及大量矩阵运算，在CPU上跑速度会很慢，而传统机器学习算法随便一台电脑就可以跑。因此深度学习最好在GPU上跑。</p>
+<p>耗时量级：</p>
+<ul>
+<li>传统机器学习：秒、分钟、小时</li>
+<li>深度学习：小时、天、周</li>
+</ul>
+<h3 id="输入特征方面"><a href="#输入特征方面" class="headerlink" title="输入特征方面"></a>输入特征方面</h3><p>机器学习依赖于人类精心设计的特征才能取得较好的结果，深度学习主张让算法自己从原始数据中发现特征。不用太过高深的先验知识做支撑，但因此对数据量的需求比较大。</p>
+<h2 id="深度学习算法"><a href="#深度学习算法" class="headerlink" title="深度学习算法"></a>深度学习算法</h2><h3 id="人工神经网络-ANN"><a href="#人工神经网络-ANN" class="headerlink" title="人工神经网络(ANN)"></a>人工神经网络(ANN)</h3><p><img src="/asset/deeplearning.jpg" alt="ANN"><br>其中的一个节点：<br><img src="/asset/ANN.jpg" alt="ANN"><br>激活函数一定是一个非线性函数，用来增加网络的复杂性。不然不管网络有多少层，始终是一个线性函数。<br>常用激活函数：</p>
+<ul>
+<li>relu<ul>
+<li>x if x &gt; 0</li>
+<li>0 if x &lt;= 0</li>
+</ul>
+</li>
+<li>tanh</li>
+</ul>
+<h3 id="卷积神经网络-CNN"><a href="#卷积神经网络-CNN" class="headerlink" title="卷积神经网络(CNN)"></a>卷积神经网络(CNN)</h3><h4 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h4><p>在深度学习里的卷积,与数学上的和信号处理上关于卷积的概念有些不同.<br><img src="/asset/juanji.jpg" alt="卷积"></p>
+<h4 id="CNN结构"><a href="#CNN结构" class="headerlink" title="CNN结构"></a>CNN结构</h4><p>两条基本假设：</p>
+<ul>
+<li>最底层特征都是局部性的，也就是说，我们用10x10这样大小的过滤器就能表示边缘等底层特征</li>
+<li>图像上不同位置处特征是类似的，也就是说，我们能用同样的一组分类器来描述不同位置的图像——<strong>平移不变性</strong></li>
+</ul>
+<p><img src="/asset/CNN.jpg" alt="CNN"><br>关键：<strong>局部连接，权值共享，池化</strong></p>
+<p>CNN在处理图像数据时与ANN相比有着巨大的优势，通过局部连接、权值共享和池化大大减少了参数的数量，从而大大减少计算量、减少过拟合并大大提高模型的表现。</p>
+<h3 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h3><p><a target="_blank" rel="noopener" href="http://peizhengyijiaqin.me/2019/12/14/ml-start/#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0">模型训练</a>的过程可以认为是使损失函数最小化的过程<br><img src="/asset/learn.gif" alt="学习过程"></p>
+<h3 id="模型泛化与过拟合、欠拟合问题"><a href="#模型泛化与过拟合、欠拟合问题" class="headerlink" title="模型泛化与过拟合、欠拟合问题"></a>模型泛化与过拟合、欠拟合问题</h3><p>因为深度学习的表达能力很强，当你的模型的表现很好时，你需要警惕，是模型学到了规律还是说模型记住了数据。检测方法也很简单，前者在一个陌生的数据集上表现依然很好，而后者反之。因此，在设计模型的时候也要考虑使用一些方式来尽可能的避免过拟合，从而得到较好的泛化能力。</p>
+<p><img src="/asset/fit.jpg" alt="fit"></p>
+<h3 id="书籍推荐"><a href="#书籍推荐" class="headerlink" title="书籍推荐"></a>书籍推荐</h3><p>入门书籍：<br>该书简单易懂，为keras之父写的书。好上手，学了就能用，里面有很多demo可以跑。<br><img src="/asset/keras_book.jpg" alt="keras"></p>
+<p>进阶书籍：<br>该书讲了很多数学、线代、概率论还有优化的东西，被奉为深度学习圣经，俗称“花书”，适合作为工具书，在手边随时查阅，入门较吃力。<br><img src="/asset/book.jpg" alt="花书"></p>
+<h3 id="主流深度学习框架"><a href="#主流深度学习框架" class="headerlink" title="主流深度学习框架"></a>主流深度学习框架</h3><ul>
+<li>Tensorflow</li>
+<li>Pytorch</li>
+<li>Keras</li>
+<li>Paddlepaddle</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>人工智能&gt;机器学习&gt;深度学习</li>
+<li>需要更多的数据量和算力</li>
+<li>ANN<ul>
+<li>输出是输入的复杂非线性函数</li>
+</ul>
+</li>
+<li>CNN<ul>
+<li>局部连接</li>
+<li>权值共享</li>
+<li>池化</li>
+</ul>
+</li>
+<li>模型训练<ul>
+<li>损失函数</li>
+<li>梯度下降</li>
+</ul>
+</li>
+<li>注意过拟合与欠拟合</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>深度学习</p><p><a href="https://oxixo.fun/2020/03/20/deep-learning/">https://oxixo.fun/2020/03/20/deep-learning/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Wang Peizheng</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-03-20</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-02-01</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/03/15/value-investment/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">价值投资思路</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2019/12/17/poem3/"><span class="level-item">Third Poem</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/favicon.jpg" alt="Peizheng Wang"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Peizheng Wang</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Chongqing</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">13</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/heros979" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/heros979"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%8D%9A%E5%AE%A2/"><span class="level-start"><span class="level-item">博客</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%95%E8%B5%84/"><span class="level-start"><span class="level-item">投资</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">机器学习</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%BA%E6%96%87/"><span class="level-start"><span class="level-item">论文</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AF%97%E9%9B%86/"><span class="level-start"><span class="level-item">诗集</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AF%BE%E7%A8%8B/"><span class="level-start"><span class="level-item">课程</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#回顾机器学习"><span class="level-left"><span class="level-item">1</span><span class="level-item">回顾机器学习</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#定义"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">定义</span></span></a></li><li><a class="level is-mobile" href="#机器学习的核心"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">机器学习的核心</span></span></a></li><li><a class="level is-mobile" href="#分类"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">分类</span></span></a></li><li><a class="level is-mobile" href="#学习过程-监督学习"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">学习过程(监督学习)</span></span></a></li></ul></li><li><a class="level is-mobile" href="#深度学习是什么"><span class="level-left"><span class="level-item">2</span><span class="level-item">深度学习是什么</span></span></a></li><li><a class="level is-mobile" href="#深度学习和传统机器学习算法的异同"><span class="level-left"><span class="level-item">3</span><span class="level-item">深度学习和传统机器学习算法的异同</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#数据方面"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">数据方面</span></span></a></li><li><a class="level is-mobile" href="#计算量方面"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">计算量方面</span></span></a></li><li><a class="level is-mobile" href="#输入特征方面"><span class="level-left"><span class="level-item">3.3</span><span class="level-item">输入特征方面</span></span></a></li></ul></li><li><a class="level is-mobile" href="#深度学习算法"><span class="level-left"><span class="level-item">4</span><span class="level-item">深度学习算法</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#人工神经网络-ANN"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">人工神经网络(ANN)</span></span></a></li><li><a class="level is-mobile" href="#卷积神经网络-CNN"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">卷积神经网络(CNN)</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#卷积"><span class="level-left"><span class="level-item">4.2.1</span><span class="level-item">卷积</span></span></a></li><li><a class="level is-mobile" href="#CNN结构"><span class="level-left"><span class="level-item">4.2.2</span><span class="level-item">CNN结构</span></span></a></li></ul></li><li><a class="level is-mobile" href="#模型训练"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">模型训练</span></span></a></li><li><a class="level is-mobile" href="#模型泛化与过拟合、欠拟合问题"><span class="level-left"><span class="level-item">4.4</span><span class="level-item">模型泛化与过拟合、欠拟合问题</span></span></a></li><li><a class="level is-mobile" href="#书籍推荐"><span class="level-left"><span class="level-item">4.5</span><span class="level-item">书籍推荐</span></span></a></li><li><a class="level is-mobile" href="#主流深度学习框架"><span class="level-left"><span class="level-item">4.6</span><span class="level-item">主流深度学习框架</span></span></a></li><li><a class="level is-mobile" href="#总结"><span class="level-left"><span class="level-item">4.7</span><span class="level-item">总结</span></span></a></li></ul></li></ul></div></div><script src="/js/toc.js" defer></script></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-16T03:14:00.000Z">2021-10-16</time></p><p class="title"><a href="/2021/10/16/DBMS/">数据库系统系统考前复习</a></p><p class="categories"><a href="/categories/%E8%AF%BE%E7%A8%8B/">课程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-15T10:50:30.000Z">2021-10-15</time></p><p class="title"><a href="/2021/10/15/ComputerNet/">计算机网络考前复习</a></p><p class="categories"><a href="/categories/%E8%AF%BE%E7%A8%8B/">课程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-08T08:15:05.000Z">2021-10-08</time></p><p class="title"><a href="/2021/10/08/meta_learning/">Awesome-Meta-Learning</a></p><p class="categories"><a href="/categories/%E8%AE%BA%E6%96%87/">论文</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-04-27T07:50:41.000Z">2021-04-27</time></p><p class="title"><a href="/2021/04/27/alpha/">为什么短线投机的预期收益不是零而是一赢二平七亏损?</a></p><p class="categories"><a href="/categories/%E6%8A%95%E8%B5%84/">投资</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-03-15T09:23:28.000Z">2021-03-15</time></p><p class="title"><a href="/2021/03/15/value-investment/">价值投资思路</a></p><p class="categories"><a href="/categories/%E6%8A%95%E8%B5%84/">投资</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/03/"><span class="level-start"><span class="level-item">三月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/12/"><span class="level-start"><span class="level-item">十二月 2019</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/VPS/"><span class="tag">VPS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bigdata/"><span class="tag">bigdata</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hginx/"><span class="tag">hginx</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/markdown/"><span class="tag">markdown</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/poem/"><span class="tag">poem</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%83%E5%AD%A6%E4%B9%A0/"><span class="tag">元学习</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%86%99%E4%BD%9C/"><span class="tag">写作</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%80%BB%E7%BB%93/"><span class="tag">总结</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%95%E8%B5%84/"><span class="tag">投资</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span class="tag">机器学习</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BD%91%E7%AB%99/"><span class="tag">网站</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%BE%E7%A8%8B%EF%BC%8C%E5%A4%8D%E4%B9%A0/"><span class="tag">课程，复习</span><span class="tag">2</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.jpg" alt="Peizheng&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2021 Wang Peizheng</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><p class="size-small"><a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">渝ICP备 2021001499号</a></p></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/KaTeX/0.11.1/katex.min.css"><script src="https://cdnjs.loli.net/ajax/libs/KaTeX/0.11.1/katex.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/KaTeX/0.11.1/contrib/auto-render.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/KaTeX/0.11.1/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
